@@ -1,9 +1,25 @@
 version: 2.0
 jobs:
  build:
-   docker:
-      - image: circleci/node:7.10
-   working_directory: /
+    # ビルド済みイメージ：https://circleci.com/docs/ja/2.0/circleci-images/
+    docker:
+        - image: circleci/node:10-browsers
+    steps:
+        - checkout
+        - run:
+            name: 最初の一歩
+            command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
+        - run:
+            name: コードの取得
+            command: |
+            ls -al
+            echo '^^^That should look familiar^^^'
+        - run:
+            name: 独自コンテナで実行
+            command: |
+            node -v
  deploy:
    macos:
       xcode: "9.0"
