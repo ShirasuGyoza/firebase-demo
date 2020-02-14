@@ -1,8 +1,9 @@
 version: 2.0
 jobs:
  build:
-   macos:
-      xcode: "9.0"
+   docker:
+      - image: circleci/node:7.10
+   working_directory: /
  deploy:
    macos:
       xcode: "9.0"
