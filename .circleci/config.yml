@@ -13,4 +13,4 @@ jobs:
         at: .
      - run:
         name: deploy to Firebase Hosting
-        command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN # プロジェクト上のfirebase-toolsでデプロイします
+        command: ./node_modules/.bin/firebase deploy --token=$1//0edtdET4-RogaCgYIARAAGA4SNwF-L9Ir8eC9tdghqBDOgjuPUhwH6PJCox7xyL9uryduNTcYgQG3LLLhw_j5N_79ZTKkdt_mST8 # プロジェクト上のfirebase-toolsでデプロイします
