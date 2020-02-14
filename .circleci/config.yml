@@ -1,11 +1,8 @@
-version: 2.0
-jobs:
- build:
-   docker:
-     - image: alpine:3.7
-   steps:
-     - run:
-         name: 最初の一歩
-         command: |
-           echo 'Hello World!'
-           echo 'This is the delivery pipeline'
+dependencies:
+    override:
+      - npm install -g firebase-tools
+  deployment:
+    deploy:
+      branch: master
+      commands:
+        - firebase deploy --project "$hosting-demo-7e4ab" --token "$FIREBASE_TOKEN"
